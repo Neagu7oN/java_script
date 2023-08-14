@@ -1,0 +1,63 @@
+body {
+  background: repeating-conic-gradient(
+    from 40deg at 50% 50%,
+    rgb(239, 234, 91) 20deg 10deg,
+    rgb(31, 239, 159) 40deg 30deg
+  );
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333;
+  padding: 20px;
+  width: 400px;
+  background: radial-gradient(
+    circle,
+    rgb(25, 187, 168) 0%,
+    rgba(228, 239, 30, 0.242) 100%
+  );
+}
+
+div {
+  margin: 10px 0;
+}
+
+label {
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input {
+  padding: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border: 2px solid #e1ed03;
+}
+
+button:hover {
+  background-color: #e1ed03;
+  color: rgb(25, 23, 23);
+  transition-duration: 1s;
+  border: 2px solid #333;
+}

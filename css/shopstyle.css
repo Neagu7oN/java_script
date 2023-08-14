@@ -1,0 +1,354 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(
+    circle,
+    rgb(245, 153, 111) 0%,
+    rgba(31, 14, 76, 0.242) 100%
+  );
+}
+/**
+* ! Navbar Style Added
+**/
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(240, 235, 235);
+  background-image: url("../images/folk.png");
+  opacity: 0.8;
+  background-position: center;
+  background-size: contain;
+  padding: 25px 60px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  border-bottom: black 2px solid;
+}
+
+.header-container a h2 {
+  text-decoration: none;
+  color: rgb(7, 7, 7);
+  border: #191717 2px solid;
+  background: linear-gradient(280deg, #eff849 30%, #9198e5 60%);
+  border-radius: 5px 20px 5px 20px;
+  padding-right: 7px;
+  padding-left: 5px;
+  align-items: center;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-container a:hover {
+  animation: shimmy 1s infinite;
+  animation-direction: alternate;
+  filter: drop-shadow(0px 0px 20px rgb(27, 114, 236));
+}
+
+@keyframes shimmy {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(5px, -5px);
+  }
+}
+
+i {
+  cursor: pointer;
+}
+
+.cart {
+  position: relative;
+  background-color: #191717;
+  color: #eaedf0;
+  font-size: 35px;
+  padding: 5px;
+  border-radius: 4px;
+  border: 2px solid #222020;
+}
+
+.cart:hover {
+  filter: drop-shadow(0px 0px 10px rgb(201, 16, 16));
+}
+
+.cartAmout {
+  position: absolute;
+  top: -15px;
+  right: -10px;
+  font-size: 21px;
+  background-color: red;
+  color: wheat;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+/**
+* ! Shop Items styles adding
+**/
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 230px);
+  gap: 70px;
+  justify-content: center;
+}
+
+.item {
+  border: 2px solid #383d41;
+  border-radius: 4px;
+}
+
+/* fixed photo */
+.item img {
+  width: 100%;
+  height: 50%;
+  border-radius: 3px 3px 0 0;
+  background-size: cover;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.price-quantity {
+  font-size: 22px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 22px;
+}
+
+.buttons-buy {
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #312c2c;
+  color: whitesmoke;
+  border: 2px solid rgb(215, 234, 13);
+  transition-duration: 1s;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.button-hover:hover {
+  background-color: #e1ed03;
+  color: rgb(25, 23, 23);
+  transition-duration: 1s;
+}
+
+.bi-dash-circle {
+  color: rgb(203, 26, 26);
+}
+
+.bi-plus-circle {
+  color: rgb(32, 164, 32);
+}
+
+/**
+
+* STyle for label and buttons in CART! 
+
+**/
+
+.text-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/**
+*  buttons homebutton and of checkout and remove 
+**/
+
+.HomeBtn,
+.checkout,
+.removeAll {
+  background-color: #343a40;
+  color: whitesmoke;
+  border: none;
+  padding: 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.checkout {
+  background-color: green;
+}
+
+.removeAll {
+  background-color: red;
+}
+
+.bi-x-circle {
+  color: red;
+  font-weight: bold;
+}
+
+/**
+* ! flex and responsive styles  in shopping cart 
+**/
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(2, 322px);
+  justify-content: center;
+  gap: 20px;
+}
+
+/**
+* ! flex and responsive styles  in cart-item 
+**/
+
+.cart-item {
+  border: 2px solid #343a40;
+  border-radius: 5px;
+  display: flex;
+}
+
+.title-price-x {
+  width: 195px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-price {
+  background-color: #343a40;
+  color: antiquewhite;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+
+/* Media  */
+@media (max-width: 1000px) {
+  .shop {
+    grid-template-columns: repeat(2, 223px);
+  }
+}
+
+@media (max-width: 500px) {
+  .shop {
+    grid-template-columns: repeat(1, 223px);
+  }
+}
+
+/* Footer */
+
+.footer {
+  background: rgb(242, 225, 225);
+  filter: drop-shadow(0 0 0.75rem rgb(194, 16, 52));
+  margin-top: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 2px solid rgb(234, 222, 222);
+  margin-bottom: 15px;
+  padding-bottom: 7px;
+  margin-bottom: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(280deg, #eff849 30%, #9198e5 60%);
+  animation: shimmy 1s infinite;
+  animation-direction: alternate;
+  filter: drop-shadow(0px 0px 20px rgb(27, 114, 236));
+  opacity: 0.8;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  border: black 2px solid;
+  border-radius: 5px 20px 5px 20px;
+  padding-right: 7px;
+  padding-left: 5px;
+}
+
+.footer-container a h2 {
+  align-items: center;
+  display: flex;
+  color: rgb(11, 11, 11);
+}
+
+.icon-social {
+  fill: #0c0c0c;
+  stroke: #fff;
+  stroke-width: 0.5px;
+  width: 35px;
+  height: 35px;
+}
+
+.footer-title {
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ef6039;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.footer-menu li {
+  list-style: none;
+  margin-top: 7px;
+}
+
+.footer-menu a {
+  color: rgb(23, 22, 22);
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.footer-menu svg {
+  flex-wrap: wrap;
+}
+
+.footer-rights {
+  margin-top: 20px;
+  border-bottom: #363636 2px solid;
+  border-top: rgb(77, 72, 72) 2px solid;
+  display: flex;
+  width: 15%;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
